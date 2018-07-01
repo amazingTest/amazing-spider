@@ -7,9 +7,9 @@ clean_data = []
 def select_dataposition():
     data = pd.read_csv('0630_51job-data_analysis.csv',header = 0,encoding= 'gbk')
     df = pd.DataFrame(data)
-    #df = df[True - df.name.duplicatde()]
-    df = df[df.position.str.contains(r'.*?数据.*?|.*?分析。*？')]
-    #df = df[df.dropna(df.salary ='')]
+    # df = df[True - df.name.duplicatde()]
+    df = df[df.position.str.contains(r'.*?数据.*?|.*?爬虫.*?|.*?分析.*?')]
+    # df = df[df.dropna(df.salary ='')]
     df.to_excel('data_51.xlsx')
 
 
@@ -67,5 +67,5 @@ def save_clean_data():
 
 
 # select_dataposition()
-get_file_elements()
-save_clean_data()
+# get_file_elements()
+# save_clean_data()
