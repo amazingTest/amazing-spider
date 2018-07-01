@@ -31,7 +31,6 @@ def get_contents():
             total = {}
             url_real = url.format(i)
             res = requests.get(url_real)
-            # res.encoding = 'gbk'
             soup = BeautifulSoup(res.text, 'html.parser')
             movie_info = soup.select('.panel-primary')[0]
             movie_title = movie_info.select('h1')[0].text.strip()
